@@ -1,0 +1,1 @@
+# jajankripto.github.io
