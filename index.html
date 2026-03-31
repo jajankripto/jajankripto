@@ -81,18 +81,42 @@
 
         .footer {
             margin-top: 40px;
-            font-size: 12px;
-            color: #AAA;
+            padding-bottom: 20px;
         }
 
-        .legal-badge {
-            margin-top: 15px;
+        .pse-container {
             display: inline-block;
-            padding: 5px 12px;
-            background: #EEE;
+            background: #fff;
+            padding: 10px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            max-width: 180px; /* Ukuran box kecil di footer */
+        }
+
+        .pse-container:hover {
+            transform: scale(1.05);
+            border-color: var(--primary-orange);
+        }
+
+        .pse-image {
+            width: 100%;
+            height: auto;
             border-radius: 4px;
-            font-size: 11px;
-            color: #777;
+            display: block;
+        }
+
+        .pse-text {
+            font-size: 10px;
+            font-weight: bold;
+            color: #555;
+            margin-top: 8px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
@@ -111,8 +135,15 @@
         </a>
 
         <div class="footer">
-            <div class="legal-badge">Terdaftar di OSS (NIB) & PSE Komdigi</div>
-            <p>&copy; 2026 Jajan Kripto. All Rights Reserved.</p>
+            <div class="pse-container" onclick="window.open('sertifikat-pse.jpg', '_blank')">
+                <img src="sertifikat-pse.jpg" alt="Sertifikat PSE Kominfo Jajan Kripto" class="pse-image">
+                <span class="pse-text">Terdaftar di PSE Komdigi</span>
+            </div>
+
+            <p style="font-size: 11px; color: #BBB; margin-top: 10px;">
+                &copy; 2026 Jajan Kripto. Terdaftar Resmi di OSS (NIB).<br>
+                Seluruh transaksi diproses secara otomatis & aman.
+            </p>
         </div>
     </div>
 
