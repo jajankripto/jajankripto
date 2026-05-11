@@ -10,101 +10,100 @@
             --primary-orange: #FF9900;
             --dark-charcoal: #2C2C2C;
             --light-bg: #F4F7F6;
-            --white: #FFFFFF;
         }
-
+    
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px; /* Jarak luar dipersempit */
             background-color: var(--light-bg);
             color: var(--dark-charcoal);
         }
-
+    
         .wrapper {
-            max-width: 500px; /* Diperkecil agar lebih fokus */
-            margin: 40px auto;
+            max-width: 400px; /* Dipersempit ke 400px agar tidak melebar */
+            margin: 20px auto;
         }
-
+    
         .container {
-            padding: 40px 30px;
-            background: var(--white);
-            border-radius: 24px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border-top: 8px solid var(--primary-orange);
+            padding: 25px 20px; /* Padding dalam dikurangi */
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-orange); /* Garis atas diperkecil */
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
-
-        .logo { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+    
+        .logo { 
+            font-size: 20px; /* Sangat kecil */
+            font-weight: 700; 
+            margin-bottom: 5px; 
+        }
         .logo span { color: var(--primary-orange); }
-
-        h1 { font-size: 22px; margin-bottom: 15px; }
-        p.description { font-size: 14px; color: #666; margin-bottom: 25px; line-height: 1.5; }
-
+    
+        h1 { 
+            font-size: 16px; /* Ukuran teks judul diperkecil drastis */
+            margin-bottom: 10px; 
+        }
+        
+        p.description { 
+            font-size: 12px; /* Teks deskripsi lebih kecil */
+            color: #777; 
+            margin-bottom: 20px; 
+            line-height: 1.4; 
+        }
+    
         .btn-telegram {
             display: inline-block;
             background-color: var(--primary-orange);
-            color: var(--white);
-            padding: 14px 28px;
-            border-radius: 50px;
+            color: #fff;
+            padding: 10px 20px; /* Tombol lebih ramping */
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 16px;
-            transition: 0.3s;
-            box-shadow: 0 6px 15px rgba(255, 153, 0, 0.2);
+            font-size: 13px; /* Teks tombol diperkecil */
+            box-shadow: 0 4px 10px rgba(255, 153, 0, 0.2);
         }
-
-        .btn-telegram:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255, 153, 0, 0.3); }
-
-        /* --- BAGIAN ARTIKEL NYELIP (COMPACT) --- */
+    
+        /* --- ARTIKEL NYELIP (LEBIH KECIL) --- */
         .mini-blog {
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px dashed #ccc;
-            border-radius: 15px;
-            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 10px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
             text-decoration: none;
-            transition: 0.3s;
         }
-
-        .mini-blog:hover {
-            background: #fff;
-            border-style: solid;
-            border-color: var(--primary-orange);
-        }
-
-        .mini-blog-icon { font-size: 24px; }
+    
+        .mini-blog-icon { font-size: 18px; }
         
         .mini-blog-text h3 {
             margin: 0;
-            font-size: 14px;
+            font-size: 12px; /* Judul artikel kecil */
             color: #333;
-            font-weight: 700;
         }
-
+    
         .mini-blog-text p {
-            margin: 2px 0 0;
-            font-size: 12px;
-            color: #777;
+            margin: 0;
+            font-size: 11px; /* Deskripsi artikel sangat kecil */
+            color: #888;
         }
-
-        /* Footer & PSE */
-        .footer { margin-top: 25px; text-align: center; }
+    
+        .footer { margin-top: 20px; text-align: center; }
         .pse-container {
             display: inline-block;
             background: #fff;
-            padding: 10px;
-            border-radius: 10px;
+            padding: 6px;
+            border-radius: 8px;
             border: 1px solid #eee;
-            margin-bottom: 15px;
-            max-width: 150px;
+            margin-bottom: 10px;
+            max-width: 100px; /* Box PSE dikecilkan */
         }
-        .pse-image { width: 100%; border-radius: 4px; }
-        .copyright { font-size: 10px; color: #aaa; line-height: 1.5; }
-
+        .pse-image { width: 100%; border-radius: 2px; }
+        .copyright { font-size: 9px; color: #bbb; }
     </style>
 </head>
 <body>
