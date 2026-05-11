@@ -9,30 +9,33 @@
         :root {
             --primary-orange: #FF9900;
             --dark-charcoal: #2C2C2C;
-            --light-bg: #F9F9F9;
+            --light-bg: #F4F7F6;
             --white: #FFFFFF;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: var(--light-bg);
             color: var(--dark-charcoal);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+            /* Hapus display flex dari body agar elemen menumpuk ke bawah secara natural */
+        }
+
+        /* Pembungkus agar semua konten berada di tengah */
+        .wrapper {
+            max-width: 600px;
+            margin: 40px auto;
         }
 
         .container {
-            max-width: 500px;
             padding: 40px;
             background: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
             border-top: 8px solid var(--primary-orange);
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .logo {
@@ -41,21 +44,12 @@
             margin-bottom: 10px;
         }
 
-        .logo span {
-            color: var(--primary-orange);
-        }
+        .logo span { color: var(--primary-orange); }
 
-        .brackets {
-            color: var(--dark-charcoal);
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 16px;
+        h1 { font-size: 24px; margin-bottom: 15px; }
+        
+        p.description {
+            font-size: 15px;
             line-height: 1.6;
             color: #666;
             margin-bottom: 30px;
@@ -65,96 +59,126 @@
             display: inline-block;
             background-color: var(--primary-orange);
             color: var(--white);
-            padding: 15px 30px;
+            padding: 16px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 18px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 153, 0, 0.25);
         }
 
         .btn-telegram:hover {
-            background-color: #e68a00;
             transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 153, 0, 0.35);
         }
 
-        .footer {
-            margin-top: 40px;
-            padding-bottom: 20px;
+        /* Section Blog */
+        #blog {
+            text-align: left;
         }
 
-        .pse-container {
-            display: inline-block;
-            background: #fff;
-            padding: 10px;
-            border-radius: 12px;
-            border: 1px solid #eee;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-charcoal);
             margin-bottom: 15px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            max-width: 200px; /* Ukuran box kecil di footer */
+            border-left: 5px solid var(--primary-orange);
+            padding-left: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .pse-container:hover {
-            transform: scale(1.05);
+        .blog-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            transition: 0.3s;
+        }
+
+        .blog-card:hover {
             border-color: var(--primary-orange);
         }
 
-        .pse-image {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-            display: block;
+        .blog-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #222;
         }
 
-        .pse-text {
-            font-size: 10px;
-            font-weight: bold;
-            color: #555;
-            margin-top: 8px;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .blog-card p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
+
+        .read-more {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Footer & PSE */
+        .footer { margin-top: 30px; text-align: center; }
+        
+        .pse-container {
+            display: inline-block;
+            background: #fff;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+            max-width: 180px;
+            cursor: pointer;
+        }
+
+        .pse-image { width: 100%; border-radius: 4px; }
+        
+        .copyright { font-size: 11px; color: #aaa; line-height: 1.6; }
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo">
-            <span class="brackets">[</span> <span>Jajan Kripto</span> <span class="brackets">]</span>
-        </div>
-        
-        <h1>Beli Aset Digital, Segampang Jajan!</h1>
-        <p>Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya.</p>
-
-        <a href="https://t.me/JajanKriptoOfficial_bot" class="btn-telegram">
-            🚀 Mulai Jajan Sekarang
-        </a>
-
-        <div class="footer">
-            <div class="pse-container" onclick="window.open('sertifikat-pse.png', '_blank')">
-                <img src="sertifikat-pse.png" alt="Sertifikat PSE Kominfo Jajan Kripto" class="pse-image">
-                <span class="pse-text">Terdaftar di PSE Komdigi</span>
+    <div class="wrapper">
+        <div class="container">
+            <div class="logo">
+                <span style="color:#2C2C2C">[</span> <span>Jajan Kripto</span> <span style="color:#2C2C2C">]</span>
             </div>
+            
+            <h1>Beli Aset Digital, Segampang Jajan!</h1>
+            <p class="description">Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya.</p>
 
-            <p style="font-size: 11px; color: #BBB; margin-top: 10px;">
-                &copy; 2026 Jajan Kripto. Terdaftar Resmi di OSS (NIB).<br>
-                Seluruh transaksi diproses secara otomatis & aman.
-            </p>
+            <a href="https://t.me/JajanKriptoOfficial_bot" class="btn-telegram">
+                🚀 Mulai Jajan Sekarang
+            </a>
+
+            <div class="footer">
+                <div class="pse-container" onclick="window.open('sertifikat-pse.png', '_blank')">
+                    <img src="sertifikat-pse.png" alt="Sertifikat PSE" class="pse-image">
+                    <span style="font-size: 10px; font-weight: bold; color: #555; display: block; margin-top: 8px;">TERDAFTAR DI PSE KOMDIGI</span>
+                </div>
+
+                <p class="copyright">
+                    &copy; 2026 Jajan Kripto. Terdaftar Resmi di OSS (NIB).<br>
+                    Seluruh transaksi diproses secara otomatis & aman.
+                </p>
+            </div>
         </div>
+
+        <section id="blog">
+            <div class="section-title">Edukasi & Analisis</div>
+            <div class="blog-card">
+                <h3>📈 Memahami USDT Dominance: Sinyal Rahasia Bitcoin</h3>
+                <p>Kenapa harga Bitcoin sering turun saat USDT Dominance naik? Pelajari cara membaca arah market untuk strategi trading Anda.</p>
+                <a href="usdt-dominance.html" class="read-more">Baca Selengkapnya →</a>
+            </div>
+        </section>
     </div>
-
-    <section id="blog" style="margin-top: 40px; padding: 20px;">
-        <h2 style="border-left: 5px solid #FF9900; padding-left: 10px;">Edukasi & Analisis</h2>
-        <div style="background: #fff; padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
-            <h3>Memahami USDT Dominance: Sinyal Rahasia Bitcoin</h3>
-            <p>Kenapa harga Bitcoin turun saat USDT Dominance naik? Pelajari cara membaca arah market di sini.</p>
-            <a href="usdt-dominance.html" style="color: #FF9900;">Baca Selengkapnya →</a>
-        </div>
-    </section>
 
 </body>  
 </html>
