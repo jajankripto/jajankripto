@@ -1,152 +1,86 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jajan Kripto - Solusi Praktis Aset Digital</title>
-<link rel="icon" type="image/png" href="favicon.ico">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root {
-    --primary-orange: #FF9900;
-    --primary-hover: #E68A00;
-    --dark-charcoal: #222222;
-    --gray-text: #64748b;
-    --white: #FFFFFF;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jajan Kripto - Solusi Praktis Aset Digital</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #FF9900;
+            --primary-hover: #E68A00;
+            --dark: #1A1A1A;
+            --gray-text: #64748b;
+            --light-bg: #F8FAFC;
+            --white: #FFFFFF;
+            --card-border: rgba(0, 0, 0, 0.06);
+        }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background: linear-gradient(270deg, #F0F4FF, #F8FAFC, #EAF0FF);
-    background-size: 600% 600%;
-    animation: gradientMove 30s ease infinite;
-    color: var(--dark-charcoal);
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--light-bg);
+            color: var(--dark-charcoal);
+            /* Hapus display flex dari body agar elemen menumpuk ke bawah secara natural */
+        }
 
-@keyframes gradientMove {
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
+        .wrapper {
+            max-width: 650px; /* Sedikit lebih lebar agar tidak terlalu 'gepeng' di desktop */
+            margin: 60px auto; /* Margin atas-bawah lebih besar untuk estetika */
+            padding: 0 20px;
+        }
 
-.wrapper {
-    max-width: 480px;
-    margin: 80px auto;
-    padding: 0 30px;
-}
+        .container {
+            background: var(--white);
+            padding: 50px 40px; /* Padding lebih dalam untuk kesan premium */
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            border: 1px solid var(--card-border);
+            /* Garis orange di atas seperti di gambar */
+            border-top: 6px solid var(--primary); 
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-/* Container & Logo */
-.container {
-    background: linear-gradient(145deg, #FFFFFF, #F9FAFB);
-    padding: 50px 40px;
-    border-radius: 28px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-    border-top: 8px solid var(--primary-orange);
-    text-align: center;
-    margin-bottom: 50px;
-    position: relative;
-    overflow: hidden;
-}
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
 
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 44px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    animation: logoFloat 4s ease-in-out infinite;
-}
+        .logo span { color: var(--primary-orange); }
+        .logo-bracket { color: #DDD; }
 
-@keyframes logoFloat {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
+        h1 { font-size: 24px; margin-bottom: 15px; }
+        
+        p.description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 30px;
+        }
 
-.logo span { color: var(--primary-orange); }
-.logo-bracket { color: #DDD; }
+        .btn-telegram {
+            display: inline-block;
+            background-color: var(--primary-orange);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 153, 0, 0.25);
+        }
 
-h1 { font-size: 24px; margin-bottom: 20px; }
-p.description { font-size: 16px; color: #555; margin-bottom: 40px; line-height: 1.6; }
+        .btn-telegram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 153, 0, 0.35);
+        }
 
-/* Telegram button with pulse neon */
-.btn-telegram {
-    display: inline-block;
-    background: linear-gradient(145deg, #FF9900, #FFB347);
-    color: #fff;
-    padding: 26px 60px;
-    border-radius: 60px;
-    font-weight: 700;
-    font-size: 24px;
-    text-decoration: none;
-    position: relative;
-    box-shadow: 0 12px 30px rgba(255,153,0,0.35);
-    animation: pulse 2s infinite;
-    transition: all 0.3s ease;
-}
-
-.btn-telegram:hover {
-    transform: scale(1.1);
-    box-shadow: 0 20px 45px rgba(255,153,0,0.55);
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 10px rgba(255,153,0,0.3); }
-    50% { box-shadow: 0 0 25px rgba(255,153,0,0.6); }
-    100% { box-shadow: 0 0 10px rgba(255,153,0,0.3); }
-}
-
-/* Blog section slider */
-#blog { width: 100%; position: relative; overflow: hidden; }
-.section-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--dark-charcoal);
-    margin-bottom: 25px;
-    border-left: 6px solid var(--primary-orange);
-    padding-left: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-}
-
-.blog-slider {
-    display: flex;
-    transition: transform 0.7s ease;
-}
-
-.blog-card {
-    flex: 0 0 100%;
-    background: linear-gradient(135deg, #FFFFFF, #F7F9FC);
-    padding: 28px 32px;
-    border-radius: 24px;
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.05);
-}
-
-.blog-card h3 { font-size: 20px; color: #222; margin: 0 0 12px 0; }
-.blog-card p { font-size: 15px; color: #555; line-height: 1.65; margin-bottom: 18px; }
-.read-more { color: var(--primary-orange); font-weight: 700; text-decoration: none; font-size: 15px; }
-.read-more:hover { color: #E68A00; }
-
-/* Footer */
-.footer { margin-top: 50px; text-align: center; }
-.pse-container {
-    display: inline-block;
-    background: #fff;
-    padding: 14px;
-    border-radius: 14px;
-    border: 1px solid #eee;
-    margin-bottom: 18px;
-    max-width: 180px;
-    cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.pse-container:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,0.06); }
-.pse-image { width: 100%; border-radius: 6px; }
-copyright { font-size: 12px; color: #aaa; line-height: 1.6; }
-
-.social-links {
+        .social-links {
     margin-top: 28px;
     display: flex;
     justify-content: center;
@@ -185,53 +119,134 @@ copyright { font-size: 12px; color: #aaa; line-height: 1.6; }
     vertical-align: middle;
 }
 
-@media (min-width: 1024px) {
-    .wrapper {
-        max-width: 750px; /* Lebar maksimal di monitor besar */
-    }
+
+
+        
+        /* Section Blog */
+        #blog {
+            width: 100%;
+        }
+
+
+        .section-header {
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary); /* Garis orange di samping judul */
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-charcoal);
+            margin-bottom: 15px;
+            border-left: 5px solid var(--primary-orange);
+            padding-left: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            transition: 0.3s ease;
+        }
+
+        .blog-card:hover {
+            border-color: var(--primary-orange);
+        }
+
+        .blog-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #222;
+        }
+
+        .blog-card p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .read-more {
+            color: var(--primary-orange);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Footer & PSE */
+        .footer { margin-top: 30px; text-align: center; }
+        
+        .pse-container {
+            display: inline-block;
+            background: #fff;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+            max-width: 180px;
+            cursor: pointer;
+        }
+
+        .pse-image { width: 100%; border-radius: 4px; }
+        
+        .copyright { font-size: 11px; color: #aaa; line-height: 1.6; }
+
+                /* Responsivitas untuk layar sangat lebar */
+        @media (min-width: 1024px) {
+            .wrapper {
+                max-width: 750px; /* Lebar maksimal di monitor besar */
+            }
             
-    h1 {
-        font-size: 32px; /* Font judul lebih besar di desktop */
-    }
-}
-</style>
+            h1 {
+                font-size: 32px; /* Font judul lebih besar di desktop */
+            }
+        }
+
+    </style>
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="container">
-        <div class="logo">
-            <span class="logo-bracket">[</span> <span>Jajan Kripto</span> <span class="logo-bracket">]</span>
-        </div>
-        <h1>Beli Aset Digital, Segampang Jajan!</h1>
-        <p class="description">Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya.</p>
-
-        <a href="https://t.me/JajanKriptoOfficial_bot" class="btn-telegram">
-            🚀 Mulai Jajan Sekarang
-        </a>
-
-    <div class="social-links">
-        <a href="https://www.instagram.com/jajankripto" target="_blank" class="social-btn instagram">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
-            Instagram
-        </a>
-    
-        <a href="https://tiktok.com/@jajankripto" target="_blank" class="social-btn tiktok">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TikTok" class="social-icon">
-            TikTok
-        </a>
-    </div>
-        <div class="footer">
-            <div class="pse-container" onclick="window.open('sertifikat-pse.png', '_blank')">
-                <img src="sertifikat-pse.png" alt="Sertifikat PSE" class="pse-image">
-                <span style="font-size: 11px; font-weight: bold; color: #555; display: block; margin-top: 8px;">TERDAFTAR DI PSE KOMDIGI</span>
+    <div class="wrapper">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-bracket">[</span> <span>Jajan Kripto</span> <span class="logo-bracket">]</span>
             </div>
-            <p class="copyright">
-                &copy; 2026 Jajan Kripto. Terdaftar Resmi di OSS (NIB).<br>
-                Seluruh transaksi diproses secara otomatis & aman.
-            </p>
+            
+            <h1>Beli Aset Digital, Segampang Jajan!</h1>
+            <p class="description">Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya.</p>
+
+            <a href="https://t.me/JajanKriptoOfficial_bot" class="btn-telegram">
+                🚀 Mulai Jajan Sekarang
+            </a>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/jajankripto" target="_blank" class="social-btn instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
+                Instagram
+            </a>
+    
+           <a href="https://tiktok.com/@jajankripto" target="_blank" class="social-btn tiktok">
+               <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TikTok" class="social-icon">
+               TikTok
+           </a>
         </div>
-    </div>
+            
+            <div class="footer">
+                <div class="pse-container" onclick="window.open('sertifikat-pse.png', '_blank')">
+                    <img src="sertifikat-pse.png" alt="Sertifikat PSE" class="pse-image">
+                    <span style="font-size: 10px; font-weight: bold; color: #555; display: block; margin-top: 8px;">TERDAFTAR DI PSE KOMDIGI</span>
+                </div>
+
+                <p class="copyright">
+                    &copy; 2026 Jajan Kripto. Terdaftar Resmi di OSS (NIB).<br>
+                    Seluruh transaksi diproses secara otomatis & aman.
+                </p>
+            </div>
+        </div>
 
     <section id="blog">
         <div class="section-title">Edukasi & Analisis</div>
@@ -253,21 +268,7 @@ copyright { font-size: 12px; color: #aaa; line-height: 1.6; }
             </div>
         </div>
     </section>
-</div>
+    </div>
 
-<script>
-// Blog slider otomatis
-const slider = document.querySelector('.blog-slider');
-const slides = document.querySelectorAll('.blog-card');
-let index = 0;
-
-function showSlide() {
-    index = (index + 1) % slides.length;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-}
-
-setInterval(showSlide, 5000);
-</script>
-
-</body>
+</body>  
 </html>
