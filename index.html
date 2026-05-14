@@ -26,20 +26,22 @@
             /* Hapus display flex dari body agar elemen menumpuk ke bawah secara natural */
         }
 
-        /* Pembungkus agar semua konten berada di tengah */
         .wrapper {
-            max-width: 600px;
-            margin: 40px auto;
+            max-width: 650px; /* Sedikit lebih lebar agar tidak terlalu 'gepeng' di desktop */
+            margin: 60px auto; /* Margin atas-bawah lebih besar untuk estetika */
+            padding: 0 20px;
         }
 
         .container {
-            padding: 40px;
             background: var(--white);
+            padding: 50px 40px; /* Padding lebih dalam untuk kesan premium */
             border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
-            border-top: 8px solid var(--primary-orange);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            border: 1px solid var(--card-border);
+            /* Garis orange di atas seperti di gambar */
+            border-top: 6px solid var(--primary); 
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .logo {
@@ -80,7 +82,14 @@
 
         /* Section Blog */
         #blog {
-            text-align: left;
+            width: 100%;
+        }
+
+
+        .section-header {
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary); /* Garis orange di samping judul */
+            padding-left: 15px;
         }
 
         .section-title {
@@ -95,12 +104,11 @@
         }
 
         .blog-card {
-            background: #fff;
-            padding: 25px;
+            background: var(--white);
+            padding: 30px;
             border-radius: 20px;
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-            transition: 0.3s;
+            border: 1px solid var(--card-border);
+            transition: 0.3s ease;
         }
 
         .blog-card:hover {
@@ -145,6 +153,17 @@
         
         .copyright { font-size: 11px; color: #aaa; line-height: 1.6; }
 
+                /* Responsivitas untuk layar sangat lebar */
+        @media (min-width: 1024px) {
+            .wrapper {
+                max-width: 750px; /* Lebar maksimal di monitor besar */
+            }
+            
+            h1 {
+                font-size: 32px; /* Font judul lebih besar di desktop */
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -176,11 +195,21 @@
         </div>
 
         <section id="blog">
-            <div class="section-title">Edukasi & Analisis</div>
+            <!-- Judul dengan garis samping -->
+            <div class="section-header">
+                <h2 style="font-size: 18px; text-transform: uppercase; margin: 0; letter-spacing: 1px;">
+                    Edukasi & Analisis
+                </h2>
+            </div>
+            
+            <!-- Kartu Blog -->
             <div class="blog-card">
-                <h3>📈 Memahami USDT Dominance: Sinyal Rahasia Bitcoin</h3>
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span>📈</span>
+                    <h3 style="margin: 0 0 10px 0; font-size: 18px;">Memahami USDT Dominance: Sinyal Rahasia Bitcoin</h3>
+                </div>
                 <p>Kenapa harga Bitcoin sering turun saat USDT Dominance naik? Pelajari cara membaca arah market untuk strategi trading Anda.</p>
-                <a href="usdt-dominance.html" class="read-more">Baca Selengkapnya →</a>
+                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: bold;">Baca Selengkapnya →</a>
             </div>
         </section>
     </div>
