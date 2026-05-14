@@ -32,7 +32,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 480px;
     margin: 80px auto;
     padding: 0 30px;
 }
@@ -66,8 +66,8 @@ body {
 .logo span { color: var(--primary-orange); }
 .logo-bracket { color: #DDD; }
 
-h1 { font-size: 50px; margin-bottom: 20px; }
-p.description { font-size: 18px; color: #555; margin-bottom: 40px; line-height: 1.6; }
+h1 { font-size: 24px; margin-bottom: 20px; }
+p.description { font-size: 16px; color: #555; margin-bottom: 40px; line-height: 1.6; }
 
 /* Telegram button with pulse neon */
 .btn-telegram {
@@ -185,12 +185,13 @@ copyright { font-size: 12px; color: #aaa; line-height: 1.6; }
     vertical-align: middle;
 }
 
-@media screen and (max-width: 480px) {
-    .container {
-       width: 100%; /* Ensure elements fill the screen */
-    }       
+@media (min-width: 1024px) {
+    .wrapper {
+        max-width: 750px; /* Lebar maksimal di monitor besar */
+    }
+            
     h1 {
-        font-size: 16px; /* Font judul lebih kecil */
+        font-size: 32px; /* Font judul lebih besar di desktop */
     }
 }
 </style>
