@@ -19,14 +19,31 @@
 
         .alert-box { background: #2c3e50; color: white; padding: 20px; border-radius: 12px; margin: 25px 0; }
         footer { margin-top: 60px; text-align: center; border-top: 1px solid #eee; padding-top: 20px; color: #888; }
-        a.back-link { color: #FF9900; text-decoration: none; font-weight: 600; }
+        a.back-link { 
+            color: #FF9900; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; /* Jarak antara panah dan teks */
+            transition: all 0.3s ease;
+        }
+        
+        /* Efek sedikit bergeser saat di-hover */
+        a.back-link:hover {
+            transform: translateX(-5px);
+            color: #E68A00;
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <a href="index.html" class="back-link">← Kembali ke Beranda Jajan Kripto</a>
-</header>
+<a href="index.html" class="back-link">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Kembali ke Beranda Jajan Kripto
+</a>
 
 <article class="card">
     <h1>Memahami USDT Dominance: Sinyal "Rahasia" di Balik Arah Pergerakan Bitcoin</h1>
