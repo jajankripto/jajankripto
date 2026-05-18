@@ -1,420 +1,522 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jajan Kripto — Solusi Praktis Aset Digital</title>
-    <meta name="description" content="Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya untuk aset digital Anda.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jajan Kripto — Solusi Praktis Aset Digital</title>
+  <meta name="description" content="Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya untuk aset digital Anda.">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #FF9900;
+      --primary-light: #FFB347;
+      --primary-dark: #CC7A00;
+      --bg-light: #FFFFFF;
+      --bg-subtle: #F8FAFC;
+      --text-main: #1A1A1A;
+      --text-muted: #64748B;
+      --glass-border: rgba(0, 0, 0, 0.05);
+      --shadow-glow: rgba(255, 153, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* --- BACKGROUND DECORATION --- */
+    .bg-dot-grid {
+      position: fixed;
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+      background-image: radial-gradient(var(--glass-border) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: -1;
+    }
+
+    /* --- HEADER --- */
+    .header {
+      position: fixed;
+      top: 20px; 
+      left: 0; 
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .header-pill {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      padding: 10px 24px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1100px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--text-main);
+    }
+
+    .brand span { 
+      color: var(--primary); 
+    }
+
+    .nav-links {
+      display: none;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) { 
+      .nav-links { 
+        display: flex; 
+      } 
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover { 
+      color: var(--primary); 
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      padding: 160px 20px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      background: #FFF5E6;
+      color: var(--primary-dark);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 153, 0, 0.2);
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 8vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--primary), #FF4D00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: clamp(16px, 2vw, 20px);
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 10px 25px var(--shadow-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--primary-dark);
+      box-shadow: 0 15px 30px var(--shadow-glow);
+    }
+
+    /* --- SECTION BASE --- */
+    .section-container {
+      max-width: 1100px;
+      margin: 60px auto 100px;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    /* --- GRID & CARDS --- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--glass-border);
+      padding: 32px;
+      border-radius: 24px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .card-icon {
+      font-size: 24px;
+      background: var(--bg-subtle);
+      width: 50px; 
+      height: 50px;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .read-more {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* --- ABOUT CONTENT --- */
+    .about-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-box p {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* --- PSE & FOOTER --- */
+    .footer {
+      background: var(--bg-subtle);
+      padding: 80px 20px 40px;
+      border-top: 1px solid var(--glass-border);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pse-badge {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      max-width: 300px;
+    }
+
+    .pse-badge img { 
+      width: 150px; 
+    }
+
+    .pse-badge span { 
+      font-size: 11px; 
+      font-weight: 800; 
+      text-align: left; 
+      line-height: 1.2; 
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .social-btn {
+      width: 45px; 
+      height: 45px;
+      border-radius: 50%;
+      background: white;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--primary);
+      transform: scale(1.1);
+    }
+
+    .social-btn img { 
+      width: 30px; 
+    }
+
+    .copyright {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes fadeUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+
+    .fade-up { 
+      animation: fadeUp 0.8s forwards; 
+    }
     
-    <!-- Fonts: Plus Jakarta Sans -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #FF9900;
-            --primary-light: #FFB347;
-            --primary-dark: #CC7A00;
-            --bg-light: #FFFFFF;
-            --bg-subtle: #F8FAFC;
-            --text-main: #1A1A1A;
-            --text-muted: #64748B;
-            --glass-border: rgba(0, 0, 0, 0.05);
-            --shadow-glow: rgba(255, 153, 0, 0.15);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* --- BACKGROUND DECORATION --- */
-        .bg-dot-grid {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(var(--glass-border) 1px, transparent 1px);
-            background-size: 30px 30px;
-            z-index: -1;
-        }
-
-        /* --- HEADER --- */
-        .header {
-            position: fixed;
-            top: 20px; left: 0; width: 100%;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            padding: 0 20px;
-        }
-
-        .header-pill {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            padding: 10px 24px;
-            border-radius: 999px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 1100px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 20px;
-            color: var(--text-main);
-        }
-
-        .brand span { color: var(--primary); }
-
-        .nav-links {
-            display: none;
-            gap: 24px;
-        }
-
-        @media (min-width: 768px) { .nav-links { display: flex; } }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-size: 14px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover { color: var(--primary); }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            padding: 160px 20px 80px;
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-        }
-
-        .tag-pill {
-            display: inline-flex;
-            align-items: center;
-            background: #FFF5E6;
-            color: var(--primary-dark);
-            padding: 6px 16px;
-            border-radius: 999px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            border: 1px solid rgba(255, 153, 0, 0.2);
-        }
-
-        .hero h1 {
-            font-size: clamp(32px, 8vw, 64px);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            margin-bottom: 24px;
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, var(--primary), #FF4D00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: clamp(16px, 2vw, 20px);
-            max-width: 650px;
-            margin: 0 auto 40px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 10px 25px var(--shadow-glow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: var(--primary-dark);
-            box-shadow: 0 15px 30px var(--shadow-glow);
-        }
-
-        /* --- BLOG / FEATURE CARDS --- */
-        .section-container {
-            max-width: 1100px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .card {
-            background: white;
-            border: 1px solid var(--glass-border);
-            padding: 32px;
-            border-radius: 24px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            border-color: var(--primary-light);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-        }
-
-        /* BARU: Pembungkus Icon dan Badge di dalam Card */
-        .card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-
-        .card-top .card-icon,
-        .card-top .tag-pill {
-            margin-bottom: 0; /* Reset margin bawaan agar sejajar sempurna */
-        }
-
-        .card-icon {
-            font-size: 24px;
-            background: var(--bg-subtle);
-            width: 50px; height: 50px;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: 12px;
-        }
-
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 15px;
-            margin-bottom: 24px;
-        }
-
-        .read-more {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        /* --- PSE & FOOTER --- */
-        .footer {
-            background: var(--bg-subtle);
-            padding: 80px 20px 40px;
-            border-top: 1px solid var(--glass-border);
-        }
-
-        .footer-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .pse-badge {
-            background: white;
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 40px;
-            max-width: 300px;
-        }
-
-        .pse-badge img { width: 150px; }
-        .pse-badge span { font-size: 11px; font-weight: 800; text-align: left; line-height: 1.2; }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-
-        .social-btn {
-            width: 45px; height: 45px;
-            border-radius: 50%;
-            background: white;
-            display: flex; align-items: center; justify-content: center;
-            border: 1px solid var(--glass-border);
-            transition: all 0.3s;
-        }
-
-        .social-btn:hover {
-            border-color: var(--primary);
-            transform: scale(1.1);
-        }
-
-        .social-btn img { width: 30px; }
-
-        .copyright {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        /* --- ANIMATIONS --- */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .fade-up { animation: fadeUp 0.8s forwards; }
-        .d1 { animation-delay: 0.1s; }
-        .d2 { animation-delay: 0.2s; }
-        .d3 { animation-delay: 0.3s; }
-    </style>
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.2s; }
+    .d3 { animation-delay: 0.3s; }
+  </style>
 </head>
 <body>
 
-    <div class="bg-dot-grid"></div>
+  <div class="bg-dot-grid"></div>
 
-    <header class="header">
-        <div class="header-pill">
-            <a href="#" class="brand">
-                <span>[</span> Jajan Kripto <span>]</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#blog" class="nav-link">Edukasi</a>
-                <a href="#" class="nav-link">Harga</a>
-                <a href="#" class="nav-link">Panduan</a>
-            </nav>
-            <a href="https://t.me/JajanKriptoOfficial_bot" class="btn btn-primary" style="padding: 8px 20px; font-size: 14px; border-radius: 999px;">
-                Coba Bot
-            </a>
+  <header class="header">
+    <div class="header-pill">
+      <a href="#" class="brand">
+        <span>[</span> Jajan Kripto <span>]</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">Tentang Kami</a>
+        <a href="#features" class="nav-link">Fitur Utama</a>
+        <a href="#blog" class="nav-link">Edukasi</a>
+      </nav>
+      <a href="https://t.me/JajanKriptoOfficial_bot" class="btn btn-primary" style="padding: 8px 20px; font-size: 14px; border-radius: 999px;">
+        Coba Bot
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="tag-pill fade-up d1">🚀 Terdaftar di PSE KOMDIGI</span>
+      <h1 class="fade-up d2">Beli Aset Digital,<br> <span class="text-gradient">Segampang Jajan!</span></h1>
+      <p class="fade-up d3">Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya. Fokus pada investasi Anda, kami urus transaksinya.</p>
+      <div class="fade-up d3" style="animation-delay: 0.4s;">
+        <a href="https://t.me/JajanKriptoOfficial_bot" class="btn btn-primary">
+          Mulai Jajan Sekarang &nbsp; →
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="section-container">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <h2 class="section-title">Tentang Jajan Kripto</h2>
+        <p style="color: var(--text-muted);">Mengenal lebih dekat ekosistem transaksi kripto instan kami.</p>
+      </div>
+      <div class="about-box">
+        <p>
+          <strong>Jajan Kripto</strong> adalah platform utilitas retail digital yang menjembatani kenyamanan transaksi lokal dengan pasar aset kripto global. Melalui integrasi Telegram Bot otomatis, kami berkomitmen untuk menghapus segala birokrasi dan hambatan teknis konvensional yang sering kali membingungkan para investor ritel. Kami percaya bahwa berinvestasi aset digital masa kini harus sama mudahnya, secepat, dan sekemparatif seperti membeli jajanan harian Anda—tanpa menunggu, aman, dan dapat diakses kapan saja selama 24 jam penuh.
+        </p>
+      </div>
+    </section>
+
+    <section id="features" class="section-container">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <h2 class="section-title">Fitur Utama</h2>
+        <p style="color: var(--text-muted);">Mengapa bertransaksi di Jajan Kripto jauh lebih praktis?</p>
+      </div>
+      <div class="grid">
+        <div class="card" style="border-top: 4px solid var(--primary);">
+          <div class="card-top">
+            <div class="card-icon" style="background: #FFF5E6; color: var(--primary-dark);">👤❌</div>
+            <span class="tag-pill">Privacy</span>
+          </div>
+          <h3>Zero KYC System</h3>
+          <p>Mulai akumulasi aset kripto Anda secara instan tanpa hambatan administratif. Tidak ada keharusan mengunggah foto KTP maupun melakukan verifikasi wajah yang memakan waktu lama. Kami menjaga privasi dan efisiensi waktu berharga Anda secara maksimal.</p>
         </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <span class="tag-pill fade-up d1">🚀 Terdaftar di PSE KOMDIGI</span>
-            <h1 class="fade-up d2">Beli Aset Digital,<br> <span class="text-gradient">Segampang Jajan!</span></h1>
-            <p class="fade-up d3">Platform retail online otomatis via Telegram Bot yang aman, cepat, dan terpercaya. Fokus pada investasi Anda, kami urus transaksinya.</p>
-            <div class="fade-up d3" style="animation-delay: 0.4s;">
-                <a href="https://t.me/JajanKriptoOfficial_bot" class="btn btn-primary">
-                    Mulai Jajan Sekarang &nbsp; →
-                </a>
-            </div>
-        </section>
-
-        <section id="blog" class="section-container">
-            <div style="margin-bottom: 40px;">
-                <h2 style="font-size: 32px; font-weight: 800;">Edukasi & Analisis</h2>
-            </div>
-            
-            <div class="grid">
-                <!-- Card 1 -->
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-icon">💡</div>
-                        <span class="tag-pill">Insight</span>
-                    </div>
-                    <h3>USDT Dominance</h3>
-                    <p>Memahami sinyal rahasia Bitcoin melalui pergerakan dominasi USDT di market kripto.</p>
-                    <a href="usdt-dominance.html" class="read-more">Baca Selengkapnya <span>→</span></a>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-icon">💡</div>
-                        <span class="tag-pill">Insight</span>
-                    </div>
-                    <h3>Fear & Greed Index</h3>
-                    <p>Rahasia mempelajari emosi investor melalui indikator pasar global.</p>
-                    <a href="fear-and-greed.html" class="read-more">Baca Selengkapnya <span>→</span></a>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-icon">🔗</div>
-                        <span class="tag-pill">Learn More</span>
-                    </div>
-                    <h3>Berita Kripto</h3>
-                    <p>Update terkini dari Cointelegraph, Coinbase Blog, dan sentimen pasar global secara real-time.</p>
-                    <a href="https://t.me/cryptonewsindonesia1" class="read-more">Baca Selengkapnya <span>→</span></a>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-icon">🔗</div>
-                        <span class="tag-pill">Learn More</span>
-                    </div>
-                    <h3>Analisis Terkini</h3>
-                    <p>Dapatkan prediksi insight pergerakan harga aset digital langsung dari creator.</p>
-                    <a href="https://www.tiktok.com/@justradeit" class="read-more">Baca Selengkapnya <span>→</span></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="pse-badge">
-                <img src="sertifikat-pse.png" alt="PSE">
-                <span>TERDAFTAR RESMI DI<br>KOMDIGI INDONESIA</span>
-            </div>
-
-            <div class="social-links">
-                <a href="https://www.instagram.com/jajankripto" class="social-btn">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG">
-                </a>
-                <a href="https://tiktok.com/@jajankripto" class="social-btn">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TT">
-                </a>
-            </div>
-
-            <p class="copyright">
-                &copy; 2026 Jajan Kripto. Terdaftar Resmi di OSS (NIB).<br>
-                Seluruh transaksi diproses secara otomatis & aman.
-            </p>
+        
+        <div class="card" style="border-top: 4px solid var(--primary);">
+          <div class="card-top">
+            <div class="card-icon" style="background: #FFF5E6; color: var(--primary-dark);">📸</div>
+            <span class="tag-pill">Payment</span>
+          </div>
+          <h3>Metode QRIS Instan</h3>
+          <p>Mendukung gerbang pembayaran digital nasional paling populer. Cukup pindai (scan) kode QRIS dinamis yang dikeluarkan otomatis oleh Bot menggunakan e-wallet pilihan Anda (GoPay, OVO, Dana, LinkAja) atau aplikasi Mobile Banking tanpa perlu input manual.</p>
         </div>
-    </footer>
+        
+        <div class="card" style="border-top: 4px solid var(--primary);">
+          <div class="card-top">
+            <div class="card-icon" style="background: #FFF5E6; color: var(--primary-dark);">🤖</div>
+            <span class="tag-pill">Automation</span>
+          </div>
+          <h3>Otomatisasi Penuh 24/7</h3>
+          <p>Setiap transaksi pembelian dan penarikan diproses secara real-time oleh backend bot pintar kami yang terhubung langsung dengan core API Binance. Tidak perlu konfirmasi manual atau menunggu antrean validasi admin.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section-container">
+      <div style="margin-bottom: 40px;">
+        <h2 class="section-title">Edukasi & Analisis</h2>
+      </div>
+      
+      <div class="grid">
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon">💡</div>
+            <span class="tag-pill">Insight</span>
+          </div>
+          <h3>USDT Dominance</h3>
+          <p>Memahami sinyal rahasia Bitcoin melalui pergerakan dominasi USDT di market kripto.</p>
+          <a href="usdt-dominance.html" class="read-more">Baca Selengkapnya <span>→</span></a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon">💡</div>
+            <span class="tag-pill">Insight</span>
+          </div>
+          <h3>Fear & Greed Index</h3>
+          <p>Rahasia mempelajari emosi investor melalui indikator pasar global.</p>
+          <a href="fear-and-greed.html" class="read-more">Baca Selengkapnya <span>→</span></a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon">🔗</div>
+            <span class="tag-pill">Learn More</span>
+          </div>
+          <h3>Berita Kripto</h3>
+          <p>Update terkini dari Cointelegraph, Coinbase Blog, dan sentimen pasar global secara real-time.</p>
+          <a href="https://t.me/cryptonewsindonesia1" class="read-more">Baca Selengkapnya <span>→</span></a>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="card-icon">🔗</div>
+            <span class="tag-pill">Learn More</span>
+          </div>
+          <h3>Analisis Terkini</h3>
+          <p>Dapatkan prediksi insight pergerakan harga aset digital langsung dari creator.</p>
+          <a href="https://www.tiktok.com/@justradeit" class="read-more">Baca Selengkapnya <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="pse-badge">
+        <img src="sertifikat-pse.png" alt="PSE">
+        <span>TERDAFTAR RESMI DI<br>KOMDIGI INDONESIA</span>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/jajankripto" class="social-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG">
+        </a>
+        <a href="https://tiktok.com/@jajankripto" class="social-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TT">
+        </a>
+      </div>
+
+      <p class="copyright">
+        &copy; 2026 Jajan Kripto. Terdaftar Resmi di OSS (NIB).<br>
+        Seluruh transaksi diproses secara otomatis & aman.
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
