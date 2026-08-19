@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Bitget Wallet Bisa Bayar QRIS Pakai USDT di Indonesia | Jajan Kripto</title>
+
+    <meta name="description"
+          content="Bitget Wallet kini dapat digunakan untuk membayar QRIS di Indonesia menggunakan USDT dan USDC. Simak cara kerja, jaringan yang didukung, biaya, dan cara menggunakannya.">
+
+    <meta name="keywords"
+          content="Bitget Wallet QRIS, bayar QRIS pakai USDT, USDT QRIS, USDC QRIS, Bitget Wallet Indonesia, bayar QRIS crypto, crypto QRIS Indonesia">
+
+    <meta name="author" content="Tim Jajan Kripto">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://jajankripto.com/bitget-wallet-bayar-qris.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title"
+          content="Bitget Wallet Bisa Bayar QRIS Pakai USDT di Indonesia">
+    <meta property="og:description"
+          content="Sekarang saldo USDT dan USDC di Bitget Wallet dapat digunakan untuk membayar QRIS di Indonesia. Ini cara kerjanya.">
+    <meta property="og:url"
+          content="https://jajankripto.com/bitget-wallet-bayar-qris.html">
+    <meta property="og:site_name" content="Jajan Kripto">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+          content="Bitget Wallet Bisa Bayar QRIS Pakai USDT di Indonesia">
+    <meta name="twitter:description"
+          content="Simak cara membayar QRIS menggunakan USDT dan USDC langsung dari Bitget Wallet.">
+
+    <style>
+        :root {
+            --jk-orange: #FF9900;
+            --jk-orange-dark: #E88900;
+            --jk-orange-soft: #FFF4E0;
+            --jk-bg: #F5F7FA;
+            --jk-surface: #FFFFFF;
+            --jk-text: #2C3E50;
+            --jk-muted: #7F8C8D;
+            --jk-footer: #95A5A6;
+            --jk-divider: #BDC3C7;
+            --jk-border: #E4E8EC;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--jk-bg);
+            color: var(--jk-text);
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .top-accent {
+            width: 100%;
+            height: 5px;
+            background: var(--jk-orange);
+        }
+
+        .container {
+            width: calc(100% - 32px);
+            max-width: 880px;
+            margin: 34px auto 50px;
+            padding: 42px 48px 48px;
+            background: var(--jk-surface);
+            border: 1px solid var(--jk-border);
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(44, 62, 80, 0.06);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 28px;
+            color: var(--jk-orange-dark);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            color: var(--jk-orange);
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin: 0 0 13px;
+            color: var(--jk-text);
+            font-size: clamp(32px, 5vw, 44px);
+            line-height: 1.16;
+            letter-spacing: -0.7px;
+            font-weight: 800;
+        }
+
+        h2 {
+            position: relative;
+            margin-top: 42px;
+            margin-bottom: 16px;
+            padding-left: 14px;
+            color: var(--jk-text);
+            font-size: 26px;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            bottom: 5px;
+            left: 0;
+            width: 4px;
+            border-radius: 8px;
+            background: var(--jk-orange);
+        }
+
+        p {
+            margin: 0 0 18px;
+            color: var(--jk-text);
+            font-size: 17px;
+        }
+
+        ul,
+        ol {
+            margin: 14px 0 24px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 9px;
+            color: var(--jk-text);
+            font-size: 17px;
+        }
+
+        li::marker {
+            color: var(--jk-orange);
+            font-weight: 700;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .meta {
+            display: inline-block;
+            margin-bottom: 27px;
+            color: var(--jk-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .lead {
+            margin-bottom: 20px;
+            color: var(--jk-text);
+            font-size: 19px;
+            line-height: 1.72;
+            font-weight: 500;
+        }
+
+        .flow-box {
+            margin: 27px 0;
+            padding: 20px 22px;
+            background: var(--jk-orange-soft);
+            border: 1px solid #FFD99A;
+            border-left: 5px solid var(--jk-orange);
+            border-radius: 10px;
+            color: var(--jk-text);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .note {
+            margin: 28px 0;
+            padding: 19px 21px;
+            background: var(--jk-orange-soft);
+            border: 1px solid #FFD99A;
+            border-left: 5px solid var(--jk-orange);
+            border-radius: 10px;
+            color: var(--jk-text);
+        }
+
+        .note strong {
+            color: var(--jk-orange-dark);
+        }
+
+        .comparison {
+            margin: 25px 0;
+            overflow-x: auto;
+            border: 1px solid var(--jk-border);
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 560px;
+            border-collapse: collapse;
+            background: var(--jk-surface);
+        }
+
+        th,
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--jk-border);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: var(--jk-orange);
+            color: #FFFFFF;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        td {
+            color: var(--jk-text);
+            font-size: 15px;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #FAFBFC;
+        }
+
+        .source {
+            margin-top: 44px;
+            padding: 24px;
+            background: #FAFBFC;
+            border: 1px solid var(--jk-border);
+            border-radius: 10px;
+            color: var(--jk-muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .source strong {
+            color: var(--jk-text);
+        }
+
+        .source a {
+            color: var(--jk-orange-dark);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .source a:hover {
+            color: var(--jk-orange);
+            text-decoration: underline;
+        }
+
+        .source p {
+            color: var(--jk-muted);
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 42px;
+            padding-top: 22px;
+            border-top: 1px solid var(--jk-divider);
+            color: var(--jk-footer);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        ::selection {
+            background: var(--jk-orange);
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: calc(100% - 20px);
+                margin: 16px auto 28px;
+                padding: 29px 21px 34px;
+                border-radius: 11px;
+            }
+
+            h1 {
+                font-size: 31px;
+                letter-spacing: -0.35px;
+            }
+
+            h2 {
+                margin-top: 35px;
+                font-size: 23px;
+            }
+
+            p,
+            li {
+                font-size: 16px;
+            }
+
+            .lead {
+                font-size: 18px;
+            }
+
+            .flow-box {
+                padding: 17px;
+                text-align: left;
+            }
+
+            .source {
+                padding: 18px;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Bitget Wallet Sekarang Bisa Bayar QRIS di Indonesia Pakai USDT dan USDC",
+        "description": "Cara membayar QRIS di Indonesia menggunakan USDT dan USDC melalui Bitget Wallet.",
+        "author": {
+            "@type": "Organization",
+            "name": "Tim Jajan Kripto"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Jajan Kripto"
+        },
+        "datePublished": "2026-08-19",
+        "dateModified": "2026-08-19",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://jajankripto.com/bitget-wallet-bayar-qris.html"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="top-accent" aria-hidden="true"></div>
+
+<main class="container">
+
+    <a class="back-link" href="/">
+        ← Kembali ke Beranda Jajan Kripto
+    </a>
+
+    <article>
+
+        <h1>Bitget Wallet Sekarang Bisa Bayar QRIS di Indonesia Pakai USDT dan USDC</h1>
+
+        <div class="meta">
+            Oleh: Tim Jajan Kripto • Update Terakhir: 19 Agustus 2026
+        </div>
+
+        <p class="lead">
+            Bitget Wallet kini sudah bisa digunakan untuk membayar QRIS
+            di merchant Indonesia menggunakan saldo kripto seperti USDT
+            dan USDC.
+        </p>
+
+        <p>
+            Pengguna cukup memindai QRIS toko melalui Bitget Wallet,
+            memilih aset yang akan digunakan, lalu mengonfirmasi pembayaran.
+            Saldo stablecoin akan dipotong dari wallet, sementara merchant
+            tetap menerima pembayaran dalam rupiah.
+        </p>
+
+        <p>
+            Fitur ini membuat stablecoin semakin dekat dengan penggunaan
+            sehari-hari. USDT yang sebelumnya lebih sering digunakan untuk
+            trading, transfer, atau menyimpan nilai kini dapat digunakan
+            untuk membayar transaksi pada merchant QRIS yang kompatibel.
+        </p>
+
+        <h2>Bitget Wallet Sudah Bisa Bayar QRIS di Indonesia</h2>
+
+        <p>
+            Bitget Wallet telah menghadirkan pembayaran QR Indonesia yang
+            memungkinkan pengguna membayar merchant QRIS menggunakan
+            stablecoin.
+        </p>
+
+        <p>
+            Cara kerjanya sederhana. Pengguna memindai QRIS melalui fitur
+            Scan di Bitget Wallet, memilih USDT atau USDC sebagai sumber
+            pembayaran, kemudian mengonfirmasi transaksi.
+        </p>
+
+        <div class="flow-box">
+            USDT/USDC → Bitget Wallet → Scan QRIS → Konversi → Merchant Menerima Rupiah
+        </div>
+
+        <p>
+            Merchant tidak perlu mempunyai crypto wallet atau menerima
+            USDT secara langsung. Proses pembayaran dilakukan melalui
+            infrastruktur QRIS sehingga dari sisi merchant transaksi tetap
+            diterima dalam rupiah.
+        </p>
+
+        <h2>Bisa Pakai USDT dan USDC</h2>
+
+        <p>
+            Stablecoin seperti USDT dan USDC menjadi aset utama yang praktis
+            untuk pembayaran karena nilainya mengikuti dolar AS dan tidak
+            berfluktuasi sebesar aset kripto seperti Bitcoin atau Ethereum.
+        </p>
+
+        <p>
+            Pengguna tetap perlu memperhatikan jaringan blockchain yang dipakai,
+            saldo gas, nilai tukar, serta biaya transaksi sebelum mengonfirmasi
+            pembayaran.
+        </p>
+
+        <h2>Cara Bayar QRIS Pakai Bitget Wallet</h2>
+
+        <ol>
+            <li>Pastikan saldo USDT atau USDC tersedia di Bitget Wallet.</li>
+            <li>Buka Bitget Wallet.</li>
+            <li>Pilih fitur Scan atau pembayaran QR.</li>
+            <li>Scan kode QRIS milik merchant.</li>
+            <li>Periksa nominal transaksi dalam rupiah.</li>
+            <li>Pilih USDT atau USDC sebagai sumber pembayaran.</li>
+            <li>Periksa nilai konversi dan biaya transaksi.</li>
+            <li>Konfirmasi pembayaran.</li>
+            <li>Tunggu sampai status transaksi berhasil.</li>
+        </ol>
+
+        <div class="note">
+            <strong>Tips:</strong> Untuk transaksi pertama, coba gunakan nominal kecil
+            terlebih dahulu. Pastikan status transaksi sudah berhasil sebelum
+            meninggalkan kasir.
+        </div>
+
+        <h2>Apa Bedanya dengan Beli Kripto Pakai QRIS?</h2>
+
+        <p>
+            Membayar merchant QRIS menggunakan Bitget Wallet berbeda dengan
+            membeli kripto menggunakan QRIS.
+        </p>
+
+        <div class="comparison">
+            <table>
+                <thead>
+                <tr>
+                    <th>Fitur</th>
+                    <th>Alur</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Beli kripto pakai QRIS</td>
+                    <td>Rupiah → QRIS → USDT/USDC</td>
+                </tr>
+                <tr>
+                    <td>Bayar merchant pakai kripto</td>
+                    <td>USDT/USDC → QRIS Merchant → Rupiah</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Pada metode pembayaran merchant, pengguna mengeluarkan stablecoin
+            dari wallet. Sistem kemudian menangani proses konversi sehingga
+            merchant tetap menerima pembayaran dalam bentuk rupiah.
+        </p>
+
+        <h2>Kenapa Fitur Ini Menarik?</h2>
+
+        <p>
+            Selama ini stablecoin lebih banyak digunakan untuk trading,
+            transfer antar-wallet, penyimpanan nilai, atau aktivitas DeFi.
+            Integrasi pembayaran QRIS membuat fungsi stablecoin menjadi lebih
+            dekat dengan aktivitas ekonomi sehari-hari.
+        </p>
+
+        <p>
+            Pengguna tidak perlu mencairkan USDT terlebih dahulu ke rekening
+            bank hanya untuk melakukan pembayaran kecil. Selama QRIS merchant
+            kompatibel dan fitur tersedia di Bitget Wallet, proses transaksi
+            bisa dilakukan langsung dari wallet.
+        </p>
+
+        <h2>Hal yang Perlu Dicek Sebelum Membayar</h2>
+
+        <ul>
+            <li>Nominal transaksi yang muncul di aplikasi.</li>
+            <li>Nilai tukar USDT atau USDC terhadap rupiah.</li>
+            <li>Jaringan blockchain yang digunakan.</li>
+            <li>Gas fee atau biaya jaringan.</li>
+            <li>Biaya layanan jika ada.</li>
+            <li>Status QRIS merchant.</li>
+            <li>Status transaksi setelah pembayaran.</li>
+        </ul>
+
+        <p>
+            Jangan hanya melihat nominal stablecoin yang terpotong. Bandingkan
+            juga nilai rupiah transaksi dengan jumlah yang diterima merchant.
+        </p>
+
+        <h2>Sudah Diuji di Merchant QRIS Indonesia</h2>
+
+        <p>
+            Dalam pengujian JajanKripto, pembayaran menggunakan Bitget Wallet
+            berhasil dilakukan pada merchant QRIS di Indonesia.
+        </p>
+
+        <p>
+            Meski demikian, jangan langsung menganggap seluruh QRIS di Indonesia
+            pasti kompatibel. Dukungan dapat bergantung pada jenis QRIS,
+            penyedia acquiring, versi aplikasi, serta sistem pembayaran yang
+            digunakan oleh Bitget Wallet.
+        </p>
+
+        <h2>Kesimpulan</h2>
+
+        <p>
+            Bitget Wallet membuat penggunaan stablecoin semakin praktis di
+            Indonesia. Pengguna kini dapat memanfaatkan USDT dan USDC untuk
+            membayar merchant QRIS yang kompatibel tanpa harus mencairkan aset
+            terlebih dahulu ke rekening bank.
+        </p>
+
+        <p>
+            Fitur ini menunjukkan bahwa fungsi crypto wallet mulai berkembang
+            dari sekadar tempat menyimpan aset menjadi alat pembayaran yang
+            dapat digunakan untuk kebutuhan sehari-hari.
+        </p>
+
+        <p>
+            Tetap periksa nilai tukar, biaya, jaringan, dan status transaksi
+            sebelum melakukan pembayaran.
+        </p>
+
+        <div class="source">
+            <strong>Sumber & Referensi:</strong><br><br>
+
+            Bitget Wallet Academy:
+            <a href="https://web3.bitget.com/es/academy/how-to-use-qr-payment-indonesia-with-bitget-wallet"
+               target="_blank"
+               rel="noopener noreferrer">
+                How to Use QR Payment Indonesia with Bitget Wallet
+            </a>
+            <br><br>
+
+            Bitget Wallet:
+            <a href="https://web3.bitget.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Official Website
+            </a>
+
+            <p style="margin-top:15px;">
+                Catatan: Artikel ini bersifat informatif dan bukan saran keuangan.
+                Dukungan merchant, jaringan, biaya, dan ketersediaan fitur dapat
+                berubah sewaktu-waktu.
+            </p>
+        </div>
+
+    </article>
+
+    <footer>
+        © 2026 Jajan Kripto. Informasi kripto untuk tujuan edukasi.
+    </footer>
+
+</main>
+
+</body>
+</html>
