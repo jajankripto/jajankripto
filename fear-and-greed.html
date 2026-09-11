@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fear & Greed Index: Panduan Lengkap untuk Trader Kripto - Jajan Kripto</title>
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.7; color: #333; max-width: 850px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        .card { background: white; padding: 35px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { color: #1a1a1a; line-height: 1.2; font-size: 2.1em; font-family: 'Space Grotesk', sans-serif; }
+        h2 { color: #FF9900; margin-top: 44px; border-left: 4px solid #FF9900; padding-left: 15px; font-size: 1.35em; font-weight: 700; }
+        .highlight { background: #fff5e6; color: #e67e22; padding: 2px 7px; border-radius: 4px; font-weight: 700; }
+        
+        /* Styling untuk Gambar Chart */
+        figure { margin: 30px 0; text-align: center; }
+        img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid #ddd; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        figcaption { margin-top: 10px; font-size: 0.9em; color: #666; font-style: italic; }
+
+        .alert-box { background: #2c3e50; color: white; padding: 22px 24px; border-radius: 12px; margin: 28px 0; lineHeight: 1.8; }
+        footer { margin-top: 60px; text-align: center; border-top: 1px solid #eee; padding-top: 20px; color: #888; font-size: 0.9em; }
+        
+        a.back-link { 
+            color: #FF9900; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            margin-bottom: 28px;
+            transition: all 0.3s ease;
+        }
+        a.back-link:hover {
+            transform: translateX(-5px);
+            color: #E68A00;
+        }
+
+        /* Fear & Greed Scale Bar */
+        .scale-container { margin: 32px 0; }
+        .gradient-bar {
+            height: 28px;
+            border-radius: 14px;
+            background: linear-gradient(to right, #e74c3c, #e67e22, #f1c40f, #2ecc71, #27ae60);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+            margin-bottom: 10px;
+        }
+        .scale-labels { display: flex; justify-content: space-between; margin-bottom: 20px; padding: 0 5px; }
+        .scale-labels span { font-size: 0.75em; color: #888; }
+        
+        .zone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+        }
+        .zone-card {
+            border-radius: 10px;
+            padding: 12px 10px;
+            text-align: center;
+            border: 2px solid;
+        }
+        .zone-emoji { font-size: 1.6em; margin-bottom: 4px; }
+        .zone-name { font-weight: 700; font-size: 0.85em; }
+        .zone-range { font-size: 0.75em; color: #666; margin-top: 2px; }
+
+        /* Signal Table */
+        .table-container { overflow-x: auto; margin: 24px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        thead tr { background: #2c3e50; color: white; }
+        th { padding: 12px 14px; text-align: left; }
+        th:first-child { border-radius: 8px 0 0 0; }
+        th:last-child { border-radius: 0 8px 0 0; }
+        td { padding: 11px 14px; }
+        .badge {
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    Kembali ke Beranda Jajan Kripto
+</a>
+
+<article class="card">
+    <h1>Fear &amp; Greed Index: Termometer Emosi Pasar Kripto</h1>
+    <p style="color: #888; font-size: 0.92em; margin-top: 0;">
+        <em>Oleh: Tim Jajan Kripto • Update Terakhir: 18 Mei 2026</em>
+    </p>
+
+    <p>
+        Pernahkah kamu bertanya-tanya mengapa Bitcoin tiba-tiba bisa naik 20% dalam seminggu, lalu turun 30% di minggu berikutnya? Jawabannya sering kali bukan soal teknologi atau fundamental — melainkan soal <span class="highlight">emosi kolektif para investor</span>. Di sinilah <strong>Fear &amp; Greed Index</strong> berperan sebagai alat ukur yang sangat berharga.
+    </p>
+
+    <h2>Apa Itu Fear &amp; Greed Index?</h2>
+    <p>
+        Fear &amp; Greed Index adalah indikator yang mengukur <span class="highlight">sentimen pasar kripto</span> dalam skala 0 hingga 100. Indeks ini dikembangkan oleh <strong>Alternative.me</strong> dan menggabungkan beberapa faktor seperti:
+    </p>
+    <ul style="padding-left: 20px; line-height: 2;">
+        <li><strong>Volatilitas (25%)</strong> — Seberapa besar fluktuasi harga BTC saat ini vs rata-rata 30/90 hari</li>
+        <li><strong>Market Momentum/Volume (25%)</strong> — Volume beli vs jual dibanding rata-rata historis</li>
+        <li><strong>Social Media (15%)</strong> — Sentimen dari Twitter/X dan Reddit</li>
+        <li><strong>Dominance (10%)</strong> — Dominasi Bitcoin terhadap altcoin</li>
+        <li><strong>Trends (10%)</strong> — Data pencarian Google terkait kripto</li>
+        <li><strong>Survei (15%)</strong> — Polling mingguan komunitas kripto</li>
+    </ul>
+
+    <h2>Cara Membaca Skala 0–100</h2>
+    <p>
+        Skala indeks terbagi menjadi 5 zona utama. Semakin rendah angkanya, semakin besar rasa <span class="highlight">ketakutan</span> di pasar. Semakin tinggi, semakin besar <span class="highlight">keserakahan</span> yang mendominasi.
+    </p>
+
+    <!-- Visual Scale Component -->
+    <div class="scale-container">
+        <div class="gradient-bar"></div>
+        <div class="scale-labels">
+            <span>0</span>
+            <span>25</span>
+            <span>45</span>
+            <span>56</span>
+            <span>75</span>
+            <span>100</span>
+        </div>
+        <div class="zone-grid">
+            <div class="zone-card" style="background-color: #e74c3c18; border-color: #e74c3c;">
+                <div class="zone-emoji">😱</div>
+                <div class="zone-name" style="color: #e74c3c;">Extreme Fear</div>
+                <div class="zone-range">0–24</div>
+            </div>
+            <div class="zone-card" style="background-color: #e67e2218; border-color: #e67e22;">
+                <div class="zone-emoji">😨</div>
+                <div class="zone-name" style="color: #e67e22;">Fear</div>
+                <div class="zone-range">25–44</div>
+            </div>
+            <div class="zone-card" style="background-color: #f1c40f18; border-color: #f1c40f;">
+                <div class="zone-emoji">😐</div>
+                <div class="zone-name" style="color: #b7950b;">Neutral</div>
+                <div class="zone-range">45–55</div>
+            </div>
+            <div class="zone-card" style="background-color: #2ecc7118; border-color: #2ecc71;">
+                <div class="zone-emoji">😏</div>
+                <div class="zone-name" style="color: #2ecc71;">Greed</div>
+                <div class="zone-range">56–74</div>
+            </div>
+            <div class="zone-card" style="background-color: #27ae6018; border-color: #27ae60;">
+                <div class="zone-emoji">🤑</div>
+                <div class="zone-name" style="color: #27ae60;">Extreme Greed</div>
+                <div class="zone-range">75–100</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Korelasi Historis dengan Harga Bitcoin</h2>
+    <p>
+        Data historis membuktikan bahwa Fear &amp; Greed Index memiliki korelasi yang sangat kuat dengan pergerakan harga BTC. Perhatikan pola yang berulang: setiap kali indeks menyentuh zona <span class="highlight">Extreme Fear (0–24)</span>, harga Bitcoin cenderung berada di titik terendah lokalnya — dan sebaliknya.
+    </p>
+
+    <figure>
+        <img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Fear and Greed Index Historical Chart">
+        <figcaption>Grafik historis Fear &amp; Greed Index vs harga Bitcoin. Perhatikan pola terbalik yang konsisten antara zona Extreme Fear dan bottom harga BTC.</figcaption>
+    </figure>
+
+    <p>
+        Pada <strong>Maret 2020</strong> (crash COVID), indeks sempat menyentuh angka <span class="highlight">8 — Extreme Fear</span>. Investor yang berani membeli di titik tersebut menikmati kenaikan lebih dari <strong>1.000%</strong> dalam 12 bulan berikutnya. Sebaliknya, pada puncak bull run <strong>November 2021</strong>, indeks berada di <span class="highlight">84 — Extreme Greed</span> tepat sebelum koreksi besar dimulai.
+    </p>
+
+    <h2>Cara Menggunakan sebagai Sinyal Beli / Jual</h2>
+    <p>
+        Berikut panduan praktis menggunakan Fear &amp; Greed Index sebagai bagian dari strategi trading kamu. Ingat, ini adalah <span class="highlight">alat bantu</span>, bukan sinyal mutlak — selalu kombinasikan dengan analisis teknikal lainnya.
+    </p>
+
+    <!-- Table Component -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nilai</th>
+                    <th>Zona</th>
+                    <th>Sinyal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #fdecea; border-bottom: 1px solid #e74c3c30;">
+                    <td style="font-weight: 700; color: #333;">0 – 24</td>
+                    <td style="color: #444;">Extreme Fear 😱</td>
+                    <td><span class="badge" style="background-color: #e74c3c;">BELI</span></td>
+                    <td style="color: #555;">Akumulasi agresif</td>
+                </tr>
+                <tr style="background-color: #fef3e2; border-bottom: 1px solid #e67e2230;">
+                    <td style="font-weight: 700; color: #333;">25 – 44</td>
+                    <td style="color: #444;">Fear 😨</td>
+                    <td><span class="badge" style="background-color: #e67e22;">BELI HATI-HATI</span></td>
+                    <td style="color: #555;">Cicil posisi</td>
+                </tr>
+                <tr style="background-color: #fefde2; border-bottom: 1px solid #f1c40f30;">
+                    <td style="font-weight: 700; color: #333;">45 – 55</td>
+                    <td style="color: #444;">Neutral 😐</td>
+                    <td><span class="badge" style="background-color: #b7950b;">HOLD</span></td>
+                    <td style="color: #555;">Tunggu konfirmasi</td>
+                </tr>
+                <tr style="background-color: #eafaf1; border-bottom: 1px solid #2ecc7130;">
+                    <td style="font-weight: 700; color: #333;">56 – 74</td>
+                    <td style="color: #444;">Greed 😏</td>
+                    <td><span class="badge" style="background-color: #27ae60;">WASPADA</span></td>
+                    <td style="color: #555;">Mulai ambil profit</td>
+                </tr>
+                <tr style="background-color: #e8f8f0; border-bottom: 1px solid #27ae6030;">
+                    <td style="font-weight: 700; color: #333;">75 – 100</td>
+                    <td style="color: #444;">Extreme Greed 🤑</td>
+                    <td><span class="badge" style="background-color: #1e8449;">JUAL</span></td>
+                    <td style="color: #555;">Kurangi eksposur</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="alert-box">
+        <strong>⚡ Aturan Emas Warren Buffett (versi Kripto):</strong><br><br>
+        <em>"Be fearful when others are greedy, and greedy when others are fearful."</em><br><br>
+        • Indeks <strong>Extreme Fear (0–24)</strong> = Waktu terbaik untuk <strong>AKUMULASI</strong> — pasar panik, harga diskon.<br>
+        • Indeks <strong>Extreme Greed (75–100)</strong> = Waspada dan mulai <strong>AMBIL PROFIT</strong> — euforia sering mendahului koreksi.<br>
+        • Jangan pernah <em>all-in</em> hanya berdasarkan satu indikator — gunakan sebagai konfirmasi.
+    </div>
+
+    <h2>Kondisi Terkini (Mei 2026)</h2>
+    <p>
+        Per Mei 2026, Fear &amp; Greed Index berada di kisaran zona <span class="highlight">Greed</span>, seiring dengan momentum positif Bitcoin yang terus bergerak menuju all-time high baru. Kondisi ini perlu dipantau dengan cermat — jika indeks mulai mendekati <span class="highlight">Extreme Greed (75+)</span>, itu adalah sinyal untuk mulai mengamankan sebagian profit.
+    </p>
+
+    <figure>
+        <img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Fear and Greed Index Mei 2026">
+        <figcaption>Kondisi Fear &amp; Greed Index terkini per Mei 2026. Pantau terus pergerakan indeks untuk mengoptimalkan timing entry dan exit.</figcaption>
+    </figure>
+
+    <h2>Kesimpulan &amp; Strategi</h2>
+    <p>
+        Fear &amp; Greed Index adalah salah satu alat paling sederhana namun powerful untuk memahami psikologi pasar kripto. Kunci penggunaannya adalah:
+    </p>
+    <ol style="padding-left: 20px; line-height: 2.2;">
+        <li><strong>Pantau secara rutin</strong> — Cek indeks setiap hari di <a href="https://alternative.me/crypto/fear-and-greed-index/" target="_blank" rel="noopener noreferrer" style="color: #FF9900; font-weight: 600;">alternative.me</a></li>
+        <li><strong>Kombinasikan dengan USDT Dominance</strong> — Jika USDT.D turun <em>dan</em> Fear &amp; Greed naik ke Greed, sinyal bullish semakin kuat</li>
+        <li><strong>Jangan reaktif</strong> — Gunakan indeks untuk perencanaan, bukan keputusan impulsif</li>
+        <li><strong>Manajemen risiko tetap nomor satu</strong> — Tidak ada indikator yang 100% akurat</li>
+    </ol>
+
+    <div class="alert-box">
+        <strong>📌 Catatan Penting:</strong> Fear &amp; Greed Index adalah indikator <em>lagging</em> — ia mencerminkan sentimen yang sudah terjadi, bukan prediksi masa depan. Gunakan bersama analisis teknikal (support/resistance, volume) dan on-chain metrics untuk hasil terbaik.
+    </div>
+</article>
+
+<footer>
+    <p>&copy; 2026 Jajan Kripto. Data disediakan oleh Alternative.me &amp; TradingView.</p>
+</footer>
+
+</body>
+</html>
