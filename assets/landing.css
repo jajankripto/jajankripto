@@ -61,8 +61,15 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px soli
 .stage-tag { background: #33404c; border: 1px solid #52606e; border-radius: 2rem; padding: .25rem .65rem; color: #f5f7fa; font-weight: 500; letter-spacing: 0; }
 .bot-window { border-radius: 1rem; overflow: hidden; background: #f2f5f7; }
 .bot-header { display: flex; align-items: center; gap: .75rem; background: white; padding: 1.05rem; border-bottom: 1px solid var(--line); }
-.bot-avatar { display: flex; flex: 0 0 44px; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--orange); color: #382207; font-size: 1.1rem; font-weight: 800; letter-spacing: -.1em; }
-.bot-header > div { min-width: 0; }
+.bot-avatar {
+  display: inline-block;
+  width: 40px;  /* sesuaikan ukuran */
+  height: 40px;
+  background-image: url('favicon.ico');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;  /* membuat bundar */
+}.bot-header > div { min-width: 0; }
 .bot-header strong { display: block; font-size: .95rem; font-weight: 800; line-height: 1.6; }
 .bot-header div > span { display: block; color: var(--muted); font-size: .8rem; overflow-wrap: anywhere; }
 .bot-header-icon { color: #546d81; margin-left: auto; }
