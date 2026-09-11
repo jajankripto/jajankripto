@@ -64,7 +64,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px soli
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-image: url('favicon.ico');
+  background-image: url('/favicon.ico');
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
